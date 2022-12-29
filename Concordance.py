@@ -3,7 +3,6 @@
 import re
 import sys
 import itertools
-import time
 class concord:
     def __init__(self, input=None, output=None):
         self.input = input
@@ -18,18 +17,7 @@ class concord:
         '''
         f = open(self.output, "w")
         outside = self.full_concordance()
-        f.write('\n'.join(outside))
-        
-    def __VersionCheck(ver) -> bool:
-        '''
-        DESCRIPTION
-           Checks whether the version of the file is 2
-        
-        '''
-        if ver=="2\n":
-            return True
-        return False 
-        
+        f.write('\n'.join(outside))       
     def __Exclusion(file):
         '''
         DESCRIPTION: 
@@ -108,11 +96,13 @@ class concord:
         DESCRIPTION:
            calls all the helper functions present in the description
         '''
-        f_contents = open("Nick.txt", "r")
+        if self.input!=None:
+            f_contents = open(self.input, "r")
+        else:
+            f_contents = sys.stdin
         version = f_contents.readline()
-        answer = concord.__VersionCheck(version)
-        if(answer==False):
-            print("Input is verison 1, concord4 expected version 2")
+        if(f_contents==None):
+            print("file not found")
             quit()
         f_contents.readline()
         exclusion = concord.__Exclusion(f_contents)
