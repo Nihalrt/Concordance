@@ -1,5 +1,4 @@
 #FULL_CONCORDANCE
-#NAME: Nihal
 import re
 import sys
 import itertools
