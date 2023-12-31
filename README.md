@@ -2,9 +2,7 @@
 
 This Python script, `concord.py`, serves as a concordance generator, a tool commonly used in literature to create an alphabetical list of words along with their frequencies and contextual usage within a given text or set of texts. The generated concordance can be insightful for researchers and readers, providing a deeper understanding of an author's language, style, and recurring themes.
 
-# Concordance Generator
-
-## Functions
+# Functions
 
 ### `concord(input, output)`
 
