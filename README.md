@@ -92,7 +92,7 @@ This Python script, `concord.py`, serves as a concordance generator, a tool comm
 ## Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/concordance-generator.git
-cd concordance-generator
+git clone https://github.com/your-username/concordance.git
+cd concordance
 
 
